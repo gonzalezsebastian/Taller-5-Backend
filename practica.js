@@ -141,10 +141,10 @@ function invertirPalabrasFrase(x){
     return x.split(" ").map(invertir).join(" ");
 }
 //10
-function ordenarParametro(x,param){
-    const ordenar = (x1,x2) => x1[param] - x2[param];
-    return x.sort(ordenar);
+function sortByParam(x,param){
+    return x.sort((a,b) => a[param] - b[param]);
 }
+
 
 console.log(cuadrado([1,2,3,4,5]));
 console.log(oddSum([1,2,3,4,5]));
@@ -155,4 +155,4 @@ console.log(factorial(4));
 console.log(promedioVector([1,2,3,4,5]));
 console.log(palindromo("aerea"));
 console.log(invertirPalabrasFrase("anita lava la tina"));
-console.log(ordenarParametro(estudiantes,"firstName"));
+console.log(sortByParam(estudiantes,'lastName'));
